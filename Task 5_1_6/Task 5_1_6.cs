@@ -3,29 +3,35 @@
     static int[] GetArrayFromConsole()
     {
         var result = new int[5];
-        int current = 0;
+        
         for (int i = 0; i < result.Length; i++)
         {
             Console.WriteLine("Введите элемент массива номер {0}", i + 1);
             result[i] = int.Parse(Console.ReadLine());
         }
-        for (int j = 0; j < result.Length; j++) 
+        return result;
+    }
+    static int[] Sort(int[] arr) 
+    {
+        int current = 0;
+        for (int j = 0; j < arr.Length; j++)
         {
-            for (int k = j; k < result.Length; k++) 
+            for (int k = j; k < arr.Length; k++)
             {
-                if (result[j] > result[k]) 
+                if (arr[j] > arr[k])
                 {
-                    current = result[j];
-                    result[j] = result[k];
-                    result[k] = current;
+                    current = arr[j];
+                    arr[j] = arr[k];
+                    arr[k] = current;
                 }
             }
         }
-        return result;
+        return arr;
     }
     static void Main() 
     {
         var arr = GetArrayFromConsole();
+        arr = Sort(arr);
         foreach (var item in arr) 
         {
             Console.Write(item + " ");
