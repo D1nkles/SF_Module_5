@@ -1,8 +1,8 @@
 ﻿class Task_5_1_6 
 {
-    static int[] GetArrayFromConsole()
+    static int[] GetArrayFromConsole(int num = 5)
     {
-        var result = new int[5];
+        var result = new int[num];
         
         for (int i = 0; i < result.Length; i++)
         {
@@ -30,7 +30,7 @@
     }
     static void Main() 
     {
-        var arr = GetArrayFromConsole();
+        var arr = GetArrayFromConsole(10);
         arr = Sort(arr);
         foreach (var item in arr) 
         {
