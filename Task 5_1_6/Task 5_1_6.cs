@@ -28,13 +28,37 @@
         }
         return arr;
     }
+    static void ShowArray(int[] arr, bool sort = false) 
+    {
+        if (sort)
+        {
+            int current = 0;
+            for (int j = 0; j < arr.Length; j++)
+            {
+                for (int k = j; k < arr.Length; k++)
+                {
+                    if (arr[j] > arr[k])
+                    {
+                        current = arr[j];
+                        arr[j] = arr[k];
+                        arr[k] = current;
+                    }
+                }
+            }
+        }
+        foreach(var num in arr)
+        {
+            Console.Write(num + " ");
+        }
+    }
     static void Main() 
     {
-        var array = GetArrayFromConsole(10);
-        var sortedarray = Sort(array);
-        foreach (var item in sortedarray) 
-        {
-            Console.Write(item + " ");
-        }
+        var array = GetArrayFromConsole();
+        ShowArray(array, true);
+        //var sortedarray = Sort(array);
+        //foreach (var item in sortedarray) 
+        //{
+        //    Console.Write(item + " ");
+        //}
     }
 }
