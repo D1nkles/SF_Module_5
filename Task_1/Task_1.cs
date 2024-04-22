@@ -1,6 +1,4 @@
 ﻿
-using System.Net.Http.Headers;
-
 class Task_1 
 {
     static void Main(string[] args) 
