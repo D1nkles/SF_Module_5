@@ -30,9 +30,9 @@
     }
     static void Main() 
     {
-        var arr = GetArrayFromConsole(10);
-        arr = Sort(arr);
-        foreach (var item in arr) 
+        var array = GetArrayFromConsole(10);
+        var sortedarray = Sort(array);
+        foreach (var item in sortedarray) 
         {
             Console.Write(item + " ");
         }
