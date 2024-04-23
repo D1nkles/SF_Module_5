@@ -53,7 +53,7 @@
     }
     static void Main() 
     {
-        var array = GetArrayFromConsole();
+        var array = GetArrayFromConsole(10);
         ShowArray(array, true);
         //var sortedarray = Sort(array);
         //foreach (var item in sortedarray) 
