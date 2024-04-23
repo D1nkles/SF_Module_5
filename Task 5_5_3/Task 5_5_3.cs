@@ -22,6 +22,7 @@ class Task_5_5_3
         {
             modif = modif.Remove(0, 2);
         }
+        Console.BackgroundColor = (ConsoleColor)deep;
         Console.WriteLine("..." + modif);
 
         if (deep > 1)
